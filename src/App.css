@@ -1,0 +1,723 @@
+@import url("https://fonts.googleapis.com/css2?family=Acme&family=Afacad+Flux:wght@100..1000&family=Ancizar+Sans:ital,wght@0,100..1000;1,100..1000&family=Caveat:wght@400..700&family=Dosis:wght@200..800&family=Ephesis&family=Jost:ital,wght@0,100..900;1,100..900&family=KoHo:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&family=League+Spartan:wght@100..900&family=Outfit:wght@100..900&family=Overpass:ital,wght@0,100..900;1,100..900&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&family=Sue+Ellen+Francisco&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  background-color: #f8f9fa;
+}
+p,
+span,
+input,
+button,
+textarea,
+a,
+th,
+td,
+li,
+div,
+caption,
+label {
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-size: 1.05rem;
+  font-style: normal;
+  line-height: 1.6em;
+  letter-spacing: 1px;
+  font-family: "Ancizar Sans", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-optical-sizing: auto;
+  font-weight: 900;
+  font-style: normal;
+  letter-spacing: 1.15px;
+  font-variation-settings: "wdth" 100, "YTLC" 500;
+  word-spacing: 0.1rem;
+  line-height: 2rem;
+  word-spacing: 0.2rem;
+  font-family: "Ancizar Sans", sans-serif;
+  font-family: "Outfit", sans-serif;
+}
+
+/* ================ NavBar Styles ================*/
+.nav-link {
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+  color: #ffc107 !important;
+}
+
+.navbar-brand {
+  font-size: 1.4rem;
+  letter-spacing: 0.5px;
+}
+
+.active-link {
+  border-bottom: 2px solid #ffc107;
+  transition: border 0.3s ease-in-out;
+}
+.nav-link:hover {
+  color: #ffb300 !important;
+}
+
+/* ===================== Home Page Styles ======================= */
+.hero-section {
+  background-color: #f8f9fa;
+}
+
+.hero-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #212529;
+  line-height: 1.4;
+}
+
+.hero-subtext {
+  font-size: 1.1rem;
+  color: #6c757d;
+  max-width: 520px;
+  margin: auto;
+}
+
+.hero-img-wrap img {
+  transition: transform 0.4s ease;
+}
+
+@media (max-width: 767px) {
+  .hero-title {
+    font-size: 2rem;
+  }
+
+  .hero-subtext {
+    font-size: 1rem;
+    text-align: center;
+  }
+}
+/* Section background (optional) */
+.services-section {
+  background-color: #f8f9fa;
+}
+
+/* Card common style */
+.service-card {
+  border-radius: 12px;
+  transition: transform 0.3s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.07);
+}
+
+.card-img-top {
+  height: 180px;
+  object-fit: cover;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+}
+
+/* Light pastel backgrounds */
+.bg-light-pink {
+  background-color: #f8f9fa;
+}
+
+.bg-light-peach {
+  background-color: #f8f9fa;
+}
+
+.bg-light-lavender {
+  background-color: #f8f9fa;
+}
+
+.bg-light-mint {
+  background-color: #f8f9fa;
+}
+
+.service-tabs {
+  background-color: #fffdf9;
+}
+
+.service-tab-card {
+  transition: transform 0.3s ease;
+}
+
+.service-tab-card:hover {
+  transform: translateY(-6px);
+}
+
+.circle-img {
+  width: 100px;
+  height: 100px;
+  margin: 0 auto;
+  border-radius: 50%;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  border: 3px solid #ffe8b5;
+  background-color: #fff;
+  transition: border 0.3s ease;
+}
+
+.circle-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.service-title {
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: #333;
+}
+
+@media (max-width: 575.98px) {
+  .circle-img {
+    width: 80px;
+    height: 80px;
+  }
+}
+
+.welcome-section {
+  background: #f8f9fa;
+}
+
+.welcome-section .bg-light {
+  background-color: #fdfdfd !important;
+}
+
+@media (max-width: 767.98px) {
+  .welcome-section .btn {
+    font-size: 1rem;
+    padding: 10px 24px;
+  }
+}
+.why-section {
+  background-color: #f8f9fa;
+}
+
+.why-section h6 {
+  font-size: 1rem;
+}
+
+.why-section p {
+  font-size: 0.92rem;
+  line-height: 1.6;
+}
+.testimonial-carousel {
+  background-color: #f8f9fa;
+  overflow: hidden;
+  position: relative;
+}
+
+.carousel-wrapper {
+  overflow: hidden;
+  position: relative;
+}
+
+.carousel-track {
+  display: flex;
+  gap: 1.5rem;
+  animation: scrollLeft 40s linear infinite;
+  width: fit-content;
+}
+
+.review-box {
+  flex: 0 0 auto;
+  width: 280px;
+  background-color: #ffffff;
+  border: 1px solid #eee;
+  border-radius: 12px;
+  padding: 1.2rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+}
+
+.stars {
+  color: #ffc107;
+  font-size: 1rem;
+}
+
+.review-message {
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.client-name {
+  font-size: 0.95rem;
+  color: #333;
+}
+
+.client-location {
+  font-size: 0.85rem;
+  color: #888;
+}
+
+@keyframes scrollLeft {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+@media (max-width: 576px) {
+  .review-box {
+    width: 85vw;
+  }
+}
+
+.location-section {
+  background-color: #fdfdfd;
+}
+
+.location-pill {
+  border: 1px solid #eee;
+  transition: all 0.3s ease;
+}
+
+.location-pill:hover {
+  background-color: #fff8e1;
+  border-color: #ffe69c;
+  transform: scale(1.05);
+}
+.cta-section {
+  background: url("./Assets/footer_bacground.jpg") center center / cover
+    no-repeat;
+  background-attachment: fixed;
+  padding: 50px 0;
+  position: relative;
+}
+
+.cta-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(4px);
+}
+
+.cta-box {
+  position: relative;
+  z-index: 2;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 20px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+}
+
+.cta-box h2,
+.cta-box p {
+  color: #fff;
+}
+
+.cta-box .btn {
+  transition: transform 0.2s ease-in-out;
+}
+
+.cta-box .btn:hover {
+  transform: scale(1.05);
+}
+
+/* ===================== About Page Styles ======================= */
+.achievement-card {
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease;
+}
+
+.achievement-card:hover {
+  transform: translateY(-5px);
+}
+
+.achievement-card h3 {
+  color: #222;
+}
+
+.achievement-card p {
+  font-size: 1rem;
+}
+.about-cta-section {
+  background: linear-gradient(to right, #fff9f0, #fefefe);
+}
+
+.about-cta-section .cta-box {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.about-cta-section .cta-box:hover {
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+}
+
+.about-cta-section h2 {
+  font-size: 2rem;
+}
+
+.about-cta-section p {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* ===================== Services Page Styles ====================== */
+.services-hero-section {
+  background-color: #f8f9fa;
+}
+
+.services-hero-title {
+  font-size: 2.3rem;
+  line-height: 1.3;
+}
+
+.services-hero-desc {
+  font-size: 1.05rem;
+  max-width: 550px;
+}
+
+.services-hero-img {
+  max-width: 100%;
+  border-radius: 20px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.service-card {
+  background: #ffffff;
+  transition: all 0.3s ease;
+  border: 1px solid #eee;
+}
+
+.service-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+.service-card h5 {
+  font-size: 1.1rem;
+}
+
+.service-card .btn {
+  border-radius: 30px;
+  transition: all 0.2s ease-in-out;
+}
+
+.service-card .btn:hover {
+  background-color: #fcb900;
+  color: #fff;
+  border-color: #fcb900;
+}
+.services-cta-section {
+  background: linear-gradient(145deg, #fffaf1, #fefefe);
+}
+
+.services-cta-section .cta-box {
+  background: #ffffff;
+  transition: all 0.3s ease-in-out;
+  border: 1px solid #eee;
+}
+
+.services-cta-section .cta-box:hover {
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+.services-cta-section h2 {
+  font-size: 2rem;
+}
+
+.services-cta-section p {
+  font-size: 1.05rem;
+}
+
+/*  ==================== Pricing Page Styles ======================= */
+.pricing-hero-section {
+  background-color: #f8f9fa;
+}
+
+.pricing-hero-title {
+  font-size: 2.3rem;
+  line-height: 1.3;
+}
+
+.pricing-hero-subtitle {
+  font-size: 1.05rem;
+  max-width: 550px;
+}
+
+.pricing-hero-img {
+  max-width: 100%;
+  border-radius: 20px;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease;
+}
+.pricing-cta-section {
+  background: linear-gradient(135deg, #fefbf4, #ffffff);
+}
+
+.pricing-cta-section .cta-box {
+  background-color: #ffffff;
+  border: 1px solid #e9e9e9;
+  transition: all 0.3s ease-in-out;
+}
+
+.pricing-cta-section .cta-box:hover {
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+}
+
+.pricing-cta-section h2 {
+  font-size: 2rem;
+}
+
+.pricing-cta-section p {
+  font-size: 1.05rem;
+}
+
+/* ===================== Booking Appointment ==================== */
+.booking-hero-section {
+  background-color: #f8f9fa;
+}
+
+.booking-hero-section h1 {
+  font-size: 2.3rem;
+  line-height: 1.4;
+}
+
+.booking-hero-section p {
+  font-size: 1.05rem;
+  max-width: 550px;
+}
+
+.booking-hero-img {
+  max-width: 100%;
+  border-radius: 20px;
+  transition: transform 0.3s ease;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.07);
+}
+
+.appointment-form {
+  background: #f8f9fa;
+}
+.pricing-cta-section,.services-cta-section,.about-cta-section {
+  background: url("./Assets/footer_bacground.jpg") center center / cover
+    no-repeat;
+    backdrop-filter: blur(10px);
+  background-attachment: fixed;
+}
+.cta-box {
+  background-color: #ffffff;
+  border: 1px solid #eaeaea;
+  transition: all 0.3s ease-in-out;
+}
+
+.cta-box:hover {
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+}
+
+/* ===================== Contact Page Styles ====================== */
+.contact-hero-section {
+  background-color: #f8f9fa;
+}
+
+.contact-hero-section h1 {
+  font-size: 2.4rem;
+  line-height: 1.3;
+}
+
+.contact-hero-section p {
+  font-size: 1.05rem;
+  max-width: 600px;
+}
+
+.contact-hero-img {
+  max-width: 100%;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.07);
+  transition: transform 0.3s ease;
+}
+
+.section-title {
+  font-size: 2rem;
+  letter-spacing: 1px;
+}
+
+.contact-card {
+  background: #ffffff;
+  border-left: 6px solid #ffc107;
+  transition: transform 0.3s ease;
+}
+
+.contact-card:hover {
+  transform: translateY(-5px);
+}
+
+.form-control {
+  border: 1px solid #ccc;
+  padding: 10px 15px;
+}
+
+textarea.form-control {
+  resize: none;
+}
+
+.social-icons a {
+  color: #555;
+  transition: color 0.3s, transform 0.3s;
+}
+
+.social-icons a:hover {
+  color: #ffc107;
+  transform: scale(1.2);
+}
+
+@media (max-width: 767px) {
+  .contact-info {
+    text-align: left;
+  }
+
+  .section-title,
+  .section-subtitle {
+    text-align: center;
+  }
+
+  .contact-card {
+    margin-bottom: 30px;
+  }
+}
+.contact-info-box {
+  background-color: #ffffff;
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+.contact-info-box:hover {
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+}
+
+.contact-image {
+  max-width: 100%;
+  border-radius: 1rem;
+}
+
+.contact-cta-section {
+  background-color: #fefefe;
+  border-top: 1px solid #eaeaea;
+}
+
+.contact-cta-section h2 {
+  font-size: 1.9rem;
+}
+
+.contact-cta-section p {
+  font-size: 1.05rem;
+  color: #666;
+}
+
+/* ===================== Footer Styles ==================== */
+
+.footer-with-bg {
+  background-image: url("./Assets/footer_bacground.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  color: white;
+}
+
+.footer-overlay {
+  background-color: rgba(0, 0, 0, 0.8);
+  padding: 60px 0 30px;
+}
+
+.footer-with-bg a:hover {
+  color: #ffc107;
+}
+
+@media (max-width: 768px) {
+  .footer-overlay .text-start,
+  .footer-overlay h5,
+  .footer-overlay h6,
+  .footer-overlay p,
+  .footer-overlay ul {
+    text-align: left !important;
+  }
+}
+
+.list-group-item {
+  background-color: transparent;
+  border: none;
+  padding-left: 0;
+  font-size: 1rem;
+}
+
+/* ======================= Not Found Styles ======================= */
+.notfound-section {
+  background-color: #fdfdfd;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+}
+
+.notfound-img {
+  max-width: 100%;
+  border-radius: 1rem;
+}
+
+/* ========================= Floating Buttons Styles ===================== */
+.floating-buttons {
+  position: fixed;
+  bottom: 25px;
+  right: 20px;
+  z-index: 1050;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.floating-buttons .btn {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  font-size: 1.2rem;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.top-btn:hover {
+  background-color: #ffb300;
+}
+
+.whatsapp-btn {
+  background-color: #25d366;
+  color: #fff;
+}
+
+.whatsapp-btn:hover {
+  background-color: #1ebe5d;
+}
+
+.section-heading {
+  position: relative;
+  font-weight: 700;
+  color: #1ebe5d;
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.section-heading::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: -10px;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 4px;
+  background: #f0b90b; /* Light golden or highlight color */
+  border-radius: 2px;
+}

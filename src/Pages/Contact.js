@@ -1,0 +1,192 @@
+import React from "react";
+import { Link } from "react-router-dom";
+import { ContactPageSEO } from "../Data/AllPagesSEO";
+
+const Contact = () => {
+  return (
+    <section className="contact-section">
+      {ContactPageSEO}
+      <section className="contact-hero-section py-5">
+        <div className="container">
+          <div className="row align-items-center gy-4">
+            {/* Left Section */}
+            <div className="col-md-6">
+              <h1 className="fw-bold text-dark mb-3">Get in Touch with Us</h1>
+              <p className="text-muted mb-4">
+                Have a question, need assistance, or want to book a beauty
+                session? We're just a message away. Let's bring the salon to
+                your doorstep!
+              </p>
+              <Link
+                to="#contact-form"
+                className="btn btn-warning fw-semibold px-4 py-2"
+              >
+                Contact Now
+              </Link>
+            </div>
+
+            {/* Right Section */}
+            <div className="col-md-6 text-center">
+              <img
+                src="https://img.freepik.com/premium-vector/customer-service-is-interactions-with-customer-with-friendly-service-office_249611-34490.jpg?w=1480"
+                alt="Contact Us"
+                className="img-fluid rounded-4 shadow contact-hero-img"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+      <div className="container">
+        <div className="row gy-4 align-items-start">
+          {/* Contact Form */}
+          <div className="col-md-6 d-none">
+            <div className="contact-card shadow p-4 rounded-4">
+              <h4 className="mb-4 text-dark">Send Us a Message</h4>
+              <form>
+                <div className="mb-3">
+                  <input
+                    type="text"
+                    className="form-control rounded-pill"
+                    placeholder="Your Name"
+                    required
+                  />
+                </div>
+                <div className="mb-3">
+                  <input
+                    type="email"
+                    className="form-control rounded-pill"
+                    placeholder="Your Email"
+                    required
+                  />
+                </div>
+                <div className="mb-3">
+                  <input
+                    type="tel"
+                    className="form-control rounded-pill"
+                    placeholder="Mobile Number"
+                    required
+                  />
+                </div>
+                <div className="mb-3">
+                  <textarea
+                    className="form-control rounded-4"
+                    rows="4"
+                    placeholder="Your Message"
+                    required
+                  ></textarea>
+                </div>
+                <button
+                  type="submit"
+                  className="btn btn-warning w-100 rounded-pill"
+                >
+                  Submit
+                </button>
+              </form>
+            </div>
+          </div>
+
+          <div className="row justify-content-around align-items-center g-1 my-5 ">
+            {/* Left Side – Contact Info */}
+            <div className="col-md-5">
+              <div className="contact-info-box p-4 shadow-sm rounded bg-white">
+                <h4 className="fw-bold mb-3 text-dark">Let's Connect</h4>
+                <p className="text-muted mb-2">
+                  Reach out to us for appointments, questions, or
+                  collaborations. We’d love to hear from you.
+                </p>
+
+                <ul className="list-unstyled mb-3">
+                  <li className="mb-2">
+                    <strong>Phone:</strong> <br />
+                    <a
+                      href="tel:+919876543210"
+                      className="text-decoration-none text-dark"
+                    >
+                      +91 98765 43210
+                    </a>
+                  </li>
+                  <li className="mb-2">
+                    <strong>Email:</strong> <br />
+                    <a
+                      href="mailto:support@yourdomain.com"
+                      className="text-decoration-none text-dark"
+                    >
+                      support@yourdomain.com
+                    </a>
+                  </li>
+                  <li className="mb-2">
+                    <strong>WhatsApp:</strong> <br />
+                    <a
+                      href="https://wa.me/919876543210?text=Hi!%20I'm%20interested%20in%20booking%20a%20salon%20service%20at%20home."
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-decoration-none text-success"
+                    >
+                      +91 98765 43210
+                    </a>
+                  </li>
+                </ul>
+
+                <a
+                  href="https://wa.me/919876543210?text=Hi!%20I'm%20interested%20in%20booking%20a%20salon%20service%20at%20home."
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn btn-success rounded-pill px-4 fw-semibold"
+                >
+                  Chat on WhatsApp
+                </a>
+
+                <div className="social-icons d-flex gap-3 mt-4">
+                  <a href="/" className="text-dark">
+                    <i className="fab fa-facebook-f"></i>
+                  </a>
+                  <a href="/" className="text-dark">
+                    <i className="fab fa-instagram"></i>
+                  </a>
+                  <a href="/" className="text-dark">
+                    <i className="fab fa-twitter"></i>
+                  </a>
+                  <a href="/" className="text-dark">
+                    <i className="fab fa-youtube"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div className="col-md-5 text-center">
+              <img
+                src="https://img.freepik.com/free-vector/hand-drawn-hairdresser-cartoon-illustration_23-2151046697.jpg?t=st=1752003328~exp=1752006928~hmac=4de3cf4338fd20a38501cda07818bfab5733c1be353d427dd22ab42971e1e3d9&w=1480"
+                alt="Contact Illustration"
+                className="img-fluid rounded-4 shadow-sm contact-image"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+      <section className="contact-cta-section py-5 bg-light">
+        <div className="container">
+          <div className="row align-items-center text-center text-md-start">
+            <div className="col-md-8 mb-4 mb-md-0">
+              <h3 className="fw-bold">
+                Still Have Questions? Let’s Talk!
+              </h3>
+              <p className="text-muted mb-0">
+                Whether you need more details, have specific requests, or just
+                want to chat before booking — we’re here to help.
+              </p>
+            </div>
+            <div className="col-md-4 text-md-end">
+              <Link
+                to="/contact"
+                className="btn btn-warning fw-semibold px-4 py-2"
+              >
+                Contact Us Now
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+    </section>
+  );
+};
+
+export default Contact;
