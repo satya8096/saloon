@@ -166,9 +166,7 @@ const Contact = () => {
         <div className="container">
           <div className="row align-items-center text-center text-md-start">
             <div className="col-md-8 mb-4 mb-md-0">
-              <h3 className="fw-bold">
-                Still Have Questions? Let’s Talk!
-              </h3>
+              <h3 className="fw-bold">Still Have Questions? Let’s Talk!</h3>
               <p className="text-muted mb-0">
                 Whether you need more details, have specific requests, or just
                 want to chat before booking — we’re here to help.

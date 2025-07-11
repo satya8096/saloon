@@ -90,7 +90,7 @@ const Services = () => {
             </p>
             <Link
               to="/book-an-appointment"
-              style={{whiteSpace:"nowrap"}}
+              style={{ whiteSpace: "nowrap" }}
               className="btn btn-warning px-4 py-2 fw-semibold mt-4"
             >
               Book an Appointment Now

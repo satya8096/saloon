@@ -179,7 +179,9 @@ const Home = () => {
       <section className="location-section py-5 bg-light">
         <div className="container">
           <div className="text-center mb-4">
-            <h3 className="fw-bold section-heading">We Serve Across Hyderabad</h3>
+            <h3 className="fw-bold section-heading">
+              We Serve Across Hyderabad
+            </h3>
             <p
               className="text-muted"
               style={{ maxWidth: "700px", margin: "0 auto" }}
@@ -206,7 +208,9 @@ const Home = () => {
       <section className="cta-section">
         <div className="container">
           <div className="cta-box text-center text-white p-5 rounded-4 shadow-lg">
-            <h3 className="fw-bold mb-3 section-heading">Pamper Yourself at Home</h3>
+            <h3 className="fw-bold mb-3 section-heading">
+              Pamper Yourself at Home
+            </h3>
             <p className="mb-4 text-dark">
               Book salon-quality beauty services at your doorstep in Hyderabad —
               safe, hygienic, and professionally done by our trained

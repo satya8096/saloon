@@ -83,16 +83,16 @@ const Footer = () => {
               </p>
 
               <div className="d-flex gap-3 mt-2">
-                <a href="#" className="text-light">
+                <a href="/" className="text-light">
                   <i className="fab fa-facebook fa-lg"></i>
                 </a>
-                <a href="#" className="text-light">
+                <a href="/" className="text-light">
                   <i className="fab fa-instagram fa-lg"></i>
                 </a>
-                <a href="#" className="text-light">
+                <a href="/" className="text-light">
                   <i className="fab fa-twitter fa-lg"></i>
                 </a>
-                <a href="#" className="text-light">
+                <a href="/" className="text-light">
                   <i className="fab fa-youtube fa-lg"></i>
                 </a>
               </div>

@@ -4,7 +4,6 @@ import { Link } from "react-router-dom";
 import { PricingPageSEO } from "../Data/AllPagesSEO";
 import { packages } from "../Data/PricingPageData";
 
-
 const Pricing = () => {
   return (
     <section className="">

@@ -1,5 +1,5 @@
-import React from 'react'
-import { reviews } from '../Data/HomePageData'
+import React from "react";
+import { reviews } from "../Data/HomePageData";
 
 const Testimonials = () => {
   return (
@@ -33,6 +33,6 @@ const Testimonials = () => {
       </div>
     </section>
   );
-}
+};
 
-export default Testimonials
+export default Testimonials;
