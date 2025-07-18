@@ -9,6 +9,7 @@ import {
   whyChooseUs,
 } from "../Data/HomePageData";
 import Testimonials from "../Components/Testimonials";
+import FAQSection from "../Components/FrequentlyAskedQuestions";
 
 const Home = () => {
   return (
@@ -21,14 +22,19 @@ const Home = () => {
             <div className="col-lg-6 text-section text-lg-start text-center">
               <h1 className="hero-title ">
                 Beauty Parlour & Salon Services{" "}
-                <br className="d-none d-md-inline" />
-                <span className="text-warning">at Home in Hyderabad</span>
+                <br className="d-md-inline" />
+                <span className="text-success home-tagline">
+                  Glow Up Without Stepping Out
+                </span>
               </h1>
               <p className="hero-subtext mt-3">
                 Enjoy premium salon services from the comfort of your home —
                 hygienic, professional, and at your schedule.
               </p>
-              <Link to="/book" className="btn btn-warning mt-4 shadow">
+              <Link
+                to="/book-an-appointment"
+                className="btn btn-warning mt-4 shadow"
+              >
                 <i className="fas fa-calendar-check me-2"></i>Book Your
                 Appointment
               </Link>
@@ -36,11 +42,11 @@ const Home = () => {
 
             {/* Image Section */}
             <div className="col-lg-6 mb-4 mb-lg-0">
-              <div className="hero-img-wrap">
+              <div className="hero-img-wrap text-center">
                 <img
-                  src={require("./../Assets/footer_bacground.jpg")} // Replace with real image
+                  src={require("./../Assets/footer_bacground.jpg")}
                   alt={`${BrandName} Salon at Home`}
-                  className="img-fluid rounded shadow-lg"
+                  className="rounded home-main-here-img"
                 />
               </div>
             </div>
@@ -97,9 +103,10 @@ const Home = () => {
 
           {/* CTA row */}
           <div className="text-center mt-5">
-            <a href="/book-an-appointment" className="btn btn-warning px-4">
-              Book Your First Service Now
-            </a>
+            <Link to="/book-an-appointment" className="btn btn-warning px-4">
+              <i className="fas fa-calendar-check me-2"></i>Book Your First
+              Service Now
+            </Link>
           </div>
         </div>
       </section>
@@ -220,11 +227,12 @@ const Home = () => {
               to="/book-an-appointment"
               className="btn btn-warning px-4 fw-semibold shadow-sm"
             >
-              Book Now
+              <i className="fa-solid fa-calendar-check"></i> Book Now
             </Link>
           </div>
         </div>
       </section>
+      <FAQSection />
     </>
   );
 };

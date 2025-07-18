@@ -169,9 +169,10 @@ const About = () => {
             </p>
             <Link
               to="/book-an-appointment"
-              className="btn btn-warning px-4 py-2 fw-semibold"
+              className="btn btn-warning px-4 py-2 fw-semibold" style={{whiteSpace:"nowrap"}}
             >
-              Book Your Appointment
+              <i className="fas fa-calendar-check me-2"></i>Book Your
+              Appointment
             </Link>
           </div>
         </div>

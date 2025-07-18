@@ -50,19 +50,19 @@ const BookAppointment = () => {
           <div className="row align-items-center gy-4">
             {/* Left Side - Content */}
             <div className="col-md-6">
-              <h1 className="fw-bold text-dark mb-3">
+              <h1 className="fw-bold text-dark">
                 Book Salon Services at Home in Hyderabad
               </h1>
+              <span className="text-danger home-tagline">
+                Don’t Wait, Just Book Today!
+              </span>
               <p className="text-muted mb-4">
                 Enjoy salon-quality treatments in the comfort of your home.
                 Quick, easy, and professional — just choose your service and
                 time!
               </p>
-              <Link
-                to="/#appointment-form"
-                className="btn btn-warning fw-semibold px-4 py-2"
-              >
-                Book Your Appointment Now
+              <Link to="" className="btn btn-warning fw-semibold px-4 py-2">
+                <i className="fa-solid fa-phone"></i> Call Us For Booking
               </Link>
             </div>
 
@@ -87,120 +87,108 @@ const BookAppointment = () => {
           />
         </div>
         <section className="appointment-form col-md-5">
-          <div className="">
-            <div>
-              <h3 className="fw-bold text-center section-heading mb-4">
-                Booking Your Slot Here
-              </h3>
-              <form
-                onSubmit={handleSubmit}
-                className="bg-white p-4 rounded shadow"
-              >
-                <div className="mb-3">
-                  <label className="form-label fw-semibold">Name</label>
-                  <input
-                    type="text"
-                    className={`form-control ${
-                      errors.name ? "is-invalid" : ""
-                    }`}
-                    placeholder="Enter your name"
-                    value={formData.name}
-                    onChange={(e) =>
-                      setFormData({ ...formData, name: e.target.value })
-                    }
-                  />
-                  {errors.name && (
-                    <div className="invalid-feedback">{errors.name}</div>
-                  )}
-                </div>
+          <div>
+            <h3 className="fw-bold text-center section-heading mb-4">
+              Booking Your Slot Here
+            </h3>
+            <form
+              onSubmit={handleSubmit}
+              className="bg-white p-4 rounded shadow"
+            >
+              <div className="mb-3">
+                <label className="form-label fw-semibold">Name</label>
+                <input
+                  type="text"
+                  className={`form-control ${errors.name ? "is-invalid" : ""}`}
+                  placeholder="Enter your name"
+                  value={formData.name}
+                  onChange={(e) =>
+                    setFormData({ ...formData, name: e.target.value })
+                  }
+                />
+                {errors.name && (
+                  <div className="invalid-feedback">{errors.name}</div>
+                )}
+              </div>
 
-                <div className="mb-3">
-                  <label className="form-label fw-semibold">Phone Number</label>
-                  <input
-                    type="tel"
-                    className={`form-control ${
-                      errors.phone ? "is-invalid" : ""
-                    }`}
-                    placeholder="Enter 10-digit phone number"
-                    value={formData.phone}
-                    onChange={(e) =>
-                      setFormData({ ...formData, phone: e.target.value })
-                    }
-                  />
-                  {errors.phone && (
-                    <div className="invalid-feedback">{errors.phone}</div>
-                  )}
-                </div>
+              <div className="mb-3">
+                <label className="form-label fw-semibold">Phone Number</label>
+                <input
+                  type="tel"
+                  className={`form-control ${errors.phone ? "is-invalid" : ""}`}
+                  placeholder="Enter 10-digit phone number"
+                  value={formData.phone}
+                  onChange={(e) =>
+                    setFormData({ ...formData, phone: e.target.value })
+                  }
+                />
+                {errors.phone && (
+                  <div className="invalid-feedback">{errors.phone}</div>
+                )}
+              </div>
 
-                <div className="mb-3">
-                  <label className="form-label fw-semibold">Service</label>
-                  <select
-                    className={`form-select ${
-                      errors.service ? "is-invalid" : ""
-                    }`}
-                    value={formData.service}
-                    onChange={(e) =>
-                      setFormData({ ...formData, service: e.target.value })
-                    }
-                  >
-                    <option value="">Select a service</option>
-                    <option value="Bridal Makeup">Bridal Makeup</option>
-                    <option value="Facial & Cleanup">Facial & Cleanup</option>
-                    <option value="Haircut & Styling">Haircut & Styling</option>
-                    <option value="Waxing & Threading">
-                      Waxing & Threading
-                    </option>
-                    <option value="Pedicure & Manicure">
-                      Pedicure & Manicure
-                    </option>
-                  </select>
-                  {errors.service && (
-                    <div className="invalid-feedback">{errors.service}</div>
-                  )}
-                </div>
-
-                <div className="mb-3">
-                  <label className="form-label fw-semibold">Date</label>
-                  <input
-                    type="date"
-                    className={`form-control ${
-                      errors.date ? "is-invalid" : ""
-                    }`}
-                    value={formData.date}
-                    onChange={(e) =>
-                      setFormData({ ...formData, date: e.target.value })
-                    }
-                  />
-                  {errors.date && (
-                    <div className="invalid-feedback">{errors.date}</div>
-                  )}
-                </div>
-
-                <div className="mb-4">
-                  <label className="form-label fw-semibold">Time</label>
-                  <input
-                    type="time"
-                    className={`form-control ${
-                      errors.time ? "is-invalid" : ""
-                    }`}
-                    value={formData.time}
-                    onChange={(e) =>
-                      setFormData({ ...formData, time: e.target.value })
-                    }
-                  />
-                  {errors.time && (
-                    <div className="invalid-feedback">{errors.time}</div>
-                  )}
-                </div>
-
-                <button
-                  type="submit"
-                  className="btn btn-warning w-100 fw-semibold"
+              <div className="mb-3">
+                <label className="form-label fw-semibold">Service</label>
+                <select
+                  className={`form-select ${
+                    errors.service ? "is-invalid" : ""
+                  }`}
+                  value={formData.service}
+                  onChange={(e) =>
+                    setFormData({ ...formData, service: e.target.value })
+                  }
                 >
-                  Book via WhatsApp
-                </button>
-              </form>
-            </div>
+                  <option value="">Select a service</option>
+                  <option value="Bridal Makeup">Bridal Makeup</option>
+                  <option value="Facial & Cleanup">Facial & Cleanup</option>
+                  <option value="Haircut & Styling">Haircut & Styling</option>
+                  <option value="Waxing & Threading">Waxing & Threading</option>
+                  <option value="Pedicure & Manicure">
+                    Pedicure & Manicure
+                  </option>
+                </select>
+                {errors.service && (
+                  <div className="invalid-feedback">{errors.service}</div>
+                )}
+              </div>
+
+              <div className="mb-3">
+                <label className="form-label fw-semibold">Date</label>
+                <input
+                  type="date"
+                  className={`form-control ${errors.date ? "is-invalid" : ""}`}
+                  value={formData.date}
+                  onChange={(e) =>
+                    setFormData({ ...formData, date: e.target.value })
+                  }
+                />
+                {errors.date && (
+                  <div className="invalid-feedback">{errors.date}</div>
+                )}
+              </div>
+
+              <div className="mb-4">
+                <label className="form-label fw-semibold">Time</label>
+                <input
+                  type="time"
+                  className={`form-control ${errors.time ? "is-invalid" : ""}`}
+                  value={formData.time}
+                  onChange={(e) =>
+                    setFormData({ ...formData, time: e.target.value })
+                  }
+                />
+                {errors.time && (
+                  <div className="invalid-feedback">{errors.time}</div>
+                )}
+              </div>
+
+              <button
+                type="submit"
+                className="btn btn-warning w-100 fw-semibold"
+              >
+                <i className="fab fa-whatsapp fa-lg"></i> Book via WhatsApp
+              </button>
+            </form>
           </div>
         </section>
       </div>
@@ -218,7 +206,7 @@ const BookAppointment = () => {
               to="/services"
               className="btn btn-outline-warning px-4 py-2 fw-semibold mt-4"
             >
-              Explore All Services
+              Explore All Services <i className="fa-solid fa-arrow-right"></i>
             </Link>
           </div>
         </div>

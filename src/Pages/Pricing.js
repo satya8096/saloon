@@ -1,8 +1,25 @@
 import React from "react";
-import { BrandName } from "../Data/BrandData";
 import { Link } from "react-router-dom";
 import { PricingPageSEO } from "../Data/AllPagesSEO";
-import { packages } from "../Data/PricingPageData";
+import {
+  gentsColorServices,
+  ladiesColorServices,
+  gentsHairServices,
+  partyStyles,
+  ladiesHairServices,
+  bleachServices,
+  chemicalData,
+  facialsData,
+  hairTreatments,
+  makeupServices,
+  piercingServices,
+  treatmentPackages,
+  waxingServices,
+} from "../Data/PricingPageData";
+import {
+  relaxationServices,
+  threadingServices,
+} from "../Data/ServicesPageData";
 
 const Pricing = () => {
   return (
@@ -16,6 +33,9 @@ const Pricing = () => {
               <h1 className="fw-bold text-dark pricing-hero-title">
                 Affordable Beauty Services at Home
               </h1>
+              <span className="text-primary home-tagline">
+                Luxury Services, Pocket-Friendly Prices
+              </span>
               <p className="text-muted mt-3 pricing-hero-subtitle">
                 Discover our flexible pricing plans designed to bring premium
                 salon services to your doorstep in Hyderabad — no hidden fees,
@@ -25,7 +45,7 @@ const Pricing = () => {
                 to="/book-an-appointment"
                 className="btn btn-warning px-4 py-2 fw-semibold mt-4"
               >
-                Book Now
+                <i className="fa-solid fa-calendar-check"></i> Book Now
               </Link>
             </div>
 
@@ -41,62 +61,494 @@ const Pricing = () => {
         </div>
       </section>
       <div className="container" style={{ backgroundColor: "#f8f9fa" }}>
-        <div className="text-center mb-5">
+        {/* <div className="text-center mb-5">
           <h3 className="fw-bold section-heading">Pricing Plans</h3>
           <p className="text-muted">
             Affordable beauty services in Hyderabad | Home salon price list by{" "}
             {BrandName}
           </p>
-        </div>
+        </div> */}
 
-        <div className="row justify-content-center">
-          {packages.map((pkg) => (
-            <div key={pkg.id} className="col-md-4 mb-4">
-              <div className="card border shadow-sm h-100">
-                <div className="card-body">
-                  {/* Badge */}
-                  {pkg.tag && (
-                    <div className="mb-3">
-                      <span className="badge bg-warning text-dark fw-semibold">
-                        {pkg.tag}
-                      </span>
-                    </div>
-                  )}
+        {/* Tabel */}
+        <section className="py-5 bg-light">
+          <div className="container">
+            <h3 className="section-heading text-center mb-5">
+              Make-Up & Treatment Packages
+            </h3>
 
-                  {/* Title & Price */}
-                  <h5 className="card-title fw-bold">{pkg.title}</h5>
-                  <h6 className="text-success fw-bold mb-2">{pkg.price}</h6>
+            {/* Make-up Table */}
+            <h4 className="text-primary fw-bold pb-2 mb-3">Make-Up Services</h4>
+            <div className="table-responsive mb-5">
+              <table className="table table-bordered table-striped text-center bg-white  shadow-sm">
+                <thead className="bg-info">
+                  <tr>
+                    <th>Service</th>
+                    <th>Regular (₹)</th>
+                    <th>HD (₹)</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {makeupServices.map((item, index) => (
+                    <tr key={index}>
+                      <td>{item.name}</td>
+                      <td>{item.regular ? `₹${item.regular}` : "--"}</td>
+                      <td>{item.hd ? `₹${item.hd}` : "--"}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
 
-                  {/* Features List */}
-                  <ul className="list-unstyled small mb-3">
-                    {pkg.features.map((feature, index) => (
-                      <li key={index}>
-                        <i className="fas fa-check-circle text-success me-2"></i>
-                        {feature}
-                      </li>
-                    ))}
-                  </ul>
+            {/* Treatment Table */}
+            <h4 className="text-primary fw-bold pb-2 mb-3">
+              Hair & Skin Treatment Packages
+            </h4>
+            <div className="table-responsive">
+              <table className="table table-bordered table-striped text-center bg-white  shadow-sm">
+                <thead className="bg-info">
+                  <tr>
+                    <th>Package</th>
+                    <th>Price (₹)</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {treatmentPackages.map((item, i) => (
+                    <tr key={i}>
+                      <td>{item.name}</td>
+                      <td>₹{item.price}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
 
-                  {/* Duration & Best For */}
-                  <p className="small mb-1">
-                    <strong>⏱ Duration:</strong> {pkg.duration}
-                  </p>
-                  <p className="small mb-3">
-                    <strong>💡 Best for:</strong> {pkg.bestFor}
-                  </p>
+        {/* Table */}
+        <section className="py-5 bg-light">
+          <div className="container">
+            <h3 className="section-heading text-center mb-5">
+              Waxing & Bleach Pricing
+            </h3>
 
-                  {/* CTA */}
-                  <a
-                    href="/book"
-                    className="btn btn-outline-warning w-100 fw-semibold"
-                  >
-                    <i className="fas fa-calendar-check me-2"></i>Book Now
-                  </a>
-                </div>
+            {/* Waxing Table */}
+            <h4 className="text-primary fw-bold pb-2 mb-3">Waxing Services</h4>
+            <div className="table-responsive mb-5">
+              <table className="table table-bordered table-striped text-center bg-white  shadow-sm">
+                <thead className="bg-info">
+                  <tr>
+                    <th>Service</th>
+                    <th>Normal</th>
+                    <th>Chocolate</th>
+                    <th>Rica</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {waxingServices.map((item, idx) => (
+                    <tr key={idx}>
+                      <td>{item.name}</td>
+                      <td>₹{item.normal}</td>
+                      <td>₹{item.chocolate}</td>
+                      <td>₹{item.rica}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+
+            {/* Bleach Table */}
+            <h4 className="text-primary fw-bold pb-2 mb-3">Bleach Services</h4>
+            <div className="table-responsive">
+              <table className="table table-bordered table-striped text-center bg-white  shadow-sm">
+                <thead className="bg-info">
+                  <tr>
+                    <th>Service</th>
+                    <th>Price (₹)</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {bleachServices.map((item, i) => (
+                    <tr key={i}>
+                      <td>{item.name}</td>
+                      <td>₹{item.price}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+
+        {/* Table */}
+        <section className="py-5 bg-light">
+          <div className="container">
+            <h3 className="section-heading text-center mb-5">
+              💆 Hair Treatments & Piercing
+            </h3>
+
+            <div className="mb-5">
+              <h4 className="text-primary fw-bold pb-2 mb-3">
+                Hair Treatments
+              </h4>
+              <div className="table-responsive mb-5">
+                <table className="table table-bordered table-striped text-center bg-white  shadow-sm">
+                  <thead className="bg-info">
+                    <tr>
+                      <th>Service</th>
+                      <th>Variant</th>
+                      <th>Price (₹)</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {hairTreatments.map((item, idx) => {
+                      if (item.variants) {
+                        return Object.entries(item.variants).map(
+                          ([variant, price], i) => (
+                            <tr key={`${idx}-${i}`}>
+                              <td>{item.name}</td>
+                              <td>{variant}</td>
+                              <td>₹{price}</td>
+                            </tr>
+                          )
+                        );
+                      }
+                      return (
+                        <tr key={idx}>
+                          <td>{item.name}</td>
+                          <td>-</td>
+                          <td>₹{item.price}</td>
+                        </tr>
+                      );
+                    })}
+                  </tbody>
+                </table>
               </div>
             </div>
-          ))}
-        </div>
+
+            <div className="mb-4">
+              <h4 className="text-primary fw-bold pb-2 mb-3">Piercing</h4>
+              <div className="table-responsive">
+                <table className="table table-bordered text-center shadow-sm bg-light">
+                  <thead className="bg-info">
+                    <tr>
+                      <th>Service</th>
+                      <th>Price (₹)</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {piercingServices.map((item, i) => (
+                      <tr key={i}>
+                        <td>{item.name}</td>
+                        <td>₹{item.price}</td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Table */}
+        <section className="py-5 bg-light" id="chemical-pricing">
+          <div className="container">
+            <h3 className="section-heading text-center mb-5">
+              🧪 Chemical Services Pricing
+            </h3>
+
+            {Object.entries(chemicalData).map(([category, services], i) => (
+              <div key={i} className="mb-5">
+                <h4 className="text-primary fw-bold pb-2 mb-3">{category}</h4>
+                <div className="table-responsive mb-5">
+                  <table className="table table-bordered table-striped text-center bg-white  shadow-sm">
+                    <thead className="bg-info">
+                      <tr>
+                        <th>Service</th>
+                        <th>Short</th>
+                        <th>Medium</th>
+                        <th>Long</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      {services.map((item, index) => (
+                        <tr key={index}>
+                          <td className="fw-semibold text-lowercase">
+                            {item.name}
+                          </td>
+                          <td>
+                            {item.prices.SHORT ? `₹${item.prices.SHORT}` : "-"}
+                          </td>
+                          <td>
+                            {item.prices.MEDIUM
+                              ? `₹${item.prices.MEDIUM}`
+                              : "-"}
+                          </td>
+                          <td>
+                            {item.prices.LONG ? `₹${item.prices.LONG}` : "-"}
+                          </td>
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        {/* Table */}
+        <section className="py-5 bg-light" id="facials-pricing">
+          <div className="container">
+            <h3 className="section-heading text-center mb-5">
+              🌿 Clean-Ups & Facials Pricing
+            </h3>
+
+            {Object.entries(facialsData).map(([category, items], index) => (
+              <div className="mb-5" key={index}>
+                <h4 className="text-primary fw-bold pb-2 mb-3">{category}</h4>
+                <div className="table-responsive mb-5">
+                  <table className="table table-bordered table-striped text-center  shadow-sm bg-white">
+                    <thead className="bg-info">
+                      <tr>
+                        <th>Service Name</th>
+                        <th>Price (₹)</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      {items.map((item, i) => (
+                        <tr key={i}>
+                          <td className="fw-semibold text-lowercase">
+                            {item.name}
+                          </td>
+                          <td>{item.price}</td>
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        {/* table */}
+        <section className="py-5 bg-light" id="threading-relaxation">
+          <div className="container">
+            <h3 className="section-heading text-center mb-5">
+              Threading & Relaxation Pricing
+            </h3>
+            <div className="mb-5">
+              <h4 className="text-primary fw-bold mb-3">
+                ✦ Threading Services
+              </h4>
+              <div className="table-responsive mb-5">
+                <table className="table table-bordered table-striped text-center bg-white  shadow-sm">
+                  <thead className="bg-info">
+                    <tr>
+                      <th>Service</th>
+                      <th>Price (₹)</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {threadingServices.map((item, index) => (
+                      <tr key={index}>
+                        <td>{item.name}</td>
+                        <td>₹{item.price.toFixed(2)}</td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
+            <div>
+              <h4 className="text-primary fw-bold mb-3">
+                🧖 Relaxation Services
+              </h4>
+              <div className="table-responsive">
+                <table className="table table-bordered table-striped text-center bg-white  shadow-sm">
+                  <thead className="bg-info">
+                    <tr>
+                      <th>Service</th>
+                      <th>Type / Description</th>
+                      <th>Price (₹)</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {relaxationServices.map((item, index) => (
+                      <tr key={index}>
+                        <td>{item.name}</td>
+                        <td>{item.type}</td>
+                        <td>{item.price}</td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Table */}
+        <section className="py-5 bg-light" id="hair-pricing">
+          <div className="container">
+            <h3 className="section-heading text-center mb-5">
+              Hair Services Pricing
+            </h3>
+
+            {/* Ladies Hair Services */}
+            <div className="mb-5">
+              <h4 className="text-primary fw-bold mb-3">
+                💇‍♀️ Hair Services (Ladies)
+              </h4>
+              <div className="table-responsive">
+                <table className="table table-bordered table-striped text-center bg-white  shadow-sm">
+                  <thead className="bg-info">
+                    <tr>
+                      <th>Sl. No.</th>
+                      <th>Particulars</th>
+                      <th>Price (₹)</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {ladiesHairServices.map((item) => (
+                      <tr key={item.sl}>
+                        <td>{item.sl}</td>
+                        <td>{item.name}</td>
+                        <td>{item.price}</td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
+            {/* Gents Hair Services */}
+            <div className="mb-5">
+              <h4 className="text-primary fw-bold mb-3">
+                💇‍♂️ Hair Services (Gents)
+              </h4>
+              <div className="table-responsive">
+                <table className="table table-bordered table-striped text-center bg-white  shadow-sm">
+                  <thead className="bg-info">
+                    <tr>
+                      <th>Sl. No.</th>
+                      <th>Particulars</th>
+                      <th>Price (₹)</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {gentsHairServices.map((item) => (
+                      <tr key={item.sl}>
+                        <td>{item.sl}</td>
+                        <td>{item.name}</td>
+                        <td>{item.price}</td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
+            {/* Party Styles */}
+            <div>
+              <h4 className="text-primary fw-bold mb-3">🎉 Party Styles</h4>
+              <div className="table-responsive">
+                <table className="table table-bordered table-striped text-center bg-white shadow-sm">
+                  <thead className="bg-info">
+                    <tr>
+                      <th>Sl. No.</th>
+                      <th>Particulars</th>
+                      <th>Type</th>
+                      <th>Price (₹)</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {partyStyles.map((item) =>
+                      item.types.map((style, idx) => (
+                        <tr key={item.sl + "-" + idx}>
+                          <td>{idx === 0 ? item.sl : ""}</td>
+                          <td>{idx === 0 ? item.name : ""}</td>
+                          <td>{style.type}</td>
+                          <td>{style.price}</td>
+                        </tr>
+                      ))
+                    )}
+                  </tbody>
+                </table>
+              </div>
+              <p className="text-muted mt-3 small fst-italic">
+                * Price may vary based on hair length & thickness. Hair wash not
+                included.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        {/* Table */}
+        <section className="py-5 bg-light" id="color-services">
+          <div className="container">
+            <h3 className="section-heading mb-4 text-center">
+              Colour Services Pricing
+            </h3>
+
+            {/* Ladies Section */}
+            <div className="mb-5">
+              <h4 className="text-primary fw-bold mb-3">Ladies</h4>
+              <div className="table-responsive">
+                <table className="table table-bordered text-center table-striped shadow-sm bg-white">
+                  <thead className="bg-info">
+                    <tr>
+                      <th>Sl. No.</th>
+                      <th>Particulars</th>
+                      <th>Hair Length</th>
+                      <th>Regular</th>
+                      <th>Ammonia Free</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {ladiesColorServices.map((item, index) => (
+                      <tr key={index}>
+                        <td>{item.slNo || ""}</td>
+                        <td>{item.particular || ""}</td>
+                        <td>{item.length || "-"}</td>
+                        <td>{item.regular || "-"}</td>
+                        <td>{item.ammoniaFree || "-"}</td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
+            {/* Gents Section */}
+            <div>
+              <h4 className="text-primary fw-bold mb-3">Gents</h4>
+              <div className="table-responsive">
+                <table className="table table-bordered text-center table-striped shadow-sm bg-white">
+                  <thead className="bg-info">
+                    <tr>
+                      <th>Sl. No.</th>
+                      <th>Particulars</th>
+                      <th>Regular</th>
+                      <th>Ammonia Free</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {gentsColorServices.map((item, index) => (
+                      <tr key={index}>
+                        <td>{item.slNo}</td>
+                        <td>{item.particular}</td>
+                        <td>{item.regular || "-"}</td>
+                        <td>{item.ammoniaFree || "-"}</td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </section>
       </div>
       <section className="pricing-cta-section py-5">
         <div className="container">
@@ -110,10 +562,10 @@ const Pricing = () => {
               your home — hygienic, professional, and budget-friendly.
             </p>
             <Link
-              to="/book-an-appointment"
+              to="/services"
               className="btn btn-warning px-4 py-2 fw-semibold mt-4"
             >
-              Book Your Package
+              Book Your Package <i className="fa-solid fa-arrow-right-long"></i>
             </Link>
           </div>
         </div>

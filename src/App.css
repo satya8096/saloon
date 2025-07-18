@@ -5,7 +5,7 @@
   padding: 0;
   box-sizing: border-box;
 }
-body{
+body {
   background-color: #f8f9fa;
 }
 p,
@@ -75,6 +75,10 @@ h6 {
   background-color: #f8f9fa;
 }
 
+.home-tagline {
+  font-family: "Caveat", cursive;
+  font-size: 1.8rem;
+}
 .hero-title {
   font-size: 2.5rem;
   font-weight: 700;
@@ -82,33 +86,22 @@ h6 {
   line-height: 1.4;
 }
 
-.hero-subtext {
-  font-size: 1.1rem;
-  color: #6c757d;
-  max-width: 520px;
-  margin: auto;
-}
-
 .hero-img-wrap img {
   transition: transform 0.4s ease;
+}
+.home-main-here-img{
+  /* width: 22rem; */
+  width: 60%;
 }
 
 @media (max-width: 767px) {
   .hero-title {
-    font-size: 2rem;
-  }
-
-  .hero-subtext {
-    font-size: 1rem;
-    text-align: center;
+    font-size: 1.6rem;
   }
 }
-/* Section background (optional) */
 .services-section {
   background-color: #f8f9fa;
 }
-
-/* Card common style */
 .service-card {
   border-radius: 12px;
   transition: transform 0.3s ease;
@@ -280,7 +273,7 @@ h6 {
 }
 
 .location-pill {
-  border: 1px solid #eee;
+  border: 1px solid black;
   transition: all 0.3s ease;
 }
 
@@ -392,6 +385,7 @@ h6 {
   background: #ffffff;
   transition: all 0.3s ease;
   border: 1px solid #eee;
+  position: relative;
 }
 
 .service-card:hover {
@@ -433,6 +427,12 @@ h6 {
 
 .services-cta-section p {
   font-size: 1.05rem;
+}
+
+.service-badge {
+  position: absolute;
+  right: 0;
+  top: -10px;
 }
 
 /*  ==================== Pricing Page Styles ======================= */
@@ -503,10 +503,12 @@ h6 {
 .appointment-form {
   background: #f8f9fa;
 }
-.pricing-cta-section,.services-cta-section,.about-cta-section {
+.pricing-cta-section,
+.services-cta-section,
+.about-cta-section {
   background: url("./Assets/footer_bacground.jpg") center center / cover
     no-repeat;
-    backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
   background-attachment: fixed;
 }
 .cta-box {
@@ -517,6 +519,15 @@ h6 {
 
 .cta-box:hover {
   box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+}
+
+th {
+  font-weight: 700;
+}
+.table thead tr th,
+.table tbody tr td {
+  padding: 0.8rem 0rem;
+  /* white-space: nowrap; */
 }
 
 /* ===================== Contact Page Styles ====================== */
@@ -567,6 +578,7 @@ textarea.form-control {
 
 .social-icons a {
   color: #555;
+  font-size: 1.3rem;
   transition: color 0.3s, transform 0.3s;
 }
 
@@ -711,7 +723,7 @@ textarea.form-control {
 }
 
 .section-heading::after {
-  content: '';
+  content: "";
   position: absolute;
   left: 50%;
   bottom: -10px;

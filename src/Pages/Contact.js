@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { ContactPageSEO } from "../Data/AllPagesSEO";
+import { emailAdress, phoneNumber } from "../Data/BrandData";
 
 const Contact = () => {
   return (
@@ -8,20 +9,23 @@ const Contact = () => {
       {ContactPageSEO}
       <section className="contact-hero-section py-5">
         <div className="container">
-          <div className="row align-items-center gy-4">
+          <div className="row align-items-center gy-4 flex-lg-row flex-column-reverse">
             {/* Left Section */}
-            <div className="col-md-6">
-              <h1 className="fw-bold text-dark mb-3">Get in Touch with Us</h1>
+            <div className="col-lg-6 text-section text-lg-start text-center">
+              <h1 className="fw-bold text-dark">Get in Touch with Us</h1>
+              <span className="text-success home-tagline">
+                Beauty Helpdesk – Call or Click!
+              </span>
               <p className="text-muted mb-4">
                 Have a question, need assistance, or want to book a beauty
                 session? We're just a message away. Let's bring the salon to
                 your doorstep!
               </p>
               <Link
-                to="#contact-form"
+                to={`tel:${phoneNumber}`}
                 className="btn btn-warning fw-semibold px-4 py-2"
               >
-                Contact Now
+                <i className="fa-solid fa-phone"></i> Contact Now
               </Link>
             </div>
 
@@ -99,41 +103,41 @@ const Contact = () => {
                   <li className="mb-2">
                     <strong>Phone:</strong> <br />
                     <a
-                      href="tel:+919876543210"
+                      href={`tel:${phoneNumber}`}
                       className="text-decoration-none text-dark"
                     >
-                      +91 98765 43210
+                      +{phoneNumber}
                     </a>
                   </li>
                   <li className="mb-2">
                     <strong>Email:</strong> <br />
                     <a
-                      href="mailto:support@yourdomain.com"
+                      href={`mailto:${emailAdress}`}
                       className="text-decoration-none text-dark"
                     >
-                      support@yourdomain.com
+                      {emailAdress}
                     </a>
                   </li>
                   <li className="mb-2">
                     <strong>WhatsApp:</strong> <br />
                     <a
-                      href="https://wa.me/919876543210?text=Hi!%20I'm%20interested%20in%20booking%20a%20salon%20service%20at%20home."
+                      href={`https://wa.me/${phoneNumber}?text=Hi!%20I'm%20interested%20in%20booking%20a%20salon%20service%20at%20home.`}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="text-decoration-none text-success"
                     >
-                      +91 98765 43210
+                      +{phoneNumber}
                     </a>
                   </li>
                 </ul>
 
                 <a
-                  href="https://wa.me/919876543210?text=Hi!%20I'm%20interested%20in%20booking%20a%20salon%20service%20at%20home."
+                  href={`https://wa.me/${phoneNumber}?text=Hi!%20I'm%20interested%20in%20booking%20a%20salon%20service%20at%20home.`}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="btn btn-success rounded-pill px-4 fw-semibold"
                 >
-                  Chat on WhatsApp
+                  <i className="fab fa-whatsapp fa-lg"></i> Chat on WhatsApp
                 </a>
 
                 <div className="social-icons d-flex gap-3 mt-4">
@@ -174,10 +178,10 @@ const Contact = () => {
             </div>
             <div className="col-md-4 text-md-end">
               <Link
-                to="/contact"
+                to={`tel:${phoneNumber}`}
                 className="btn btn-warning fw-semibold px-4 py-2"
               >
-                Contact Us Now
+                <i className="fa-solid fa-phone"></i> Contact Us Now
               </Link>
             </div>
           </div>

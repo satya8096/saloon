@@ -1,5 +1,5 @@
 import React from "react";
-import { BrandName } from "../Data/BrandData";
+import { BrandName, emailAdress, phoneNumber } from "../Data/BrandData";
 
 const Footer = () => {
   return (
@@ -73,13 +73,14 @@ const Footer = () => {
             <div className="col-md-3 col-12">
               <h6 className="text-uppercase text-warning mb-3">Contact Us</h6>
               <p className="small mb-1">
-                <i className="fas fa-phone-alt me-2"></i>+91 98765 43210
+                <i className="fas fa-phone-alt me-2"></i>+{phoneNumber}
               </p>
               <p className="small mb-1">
-                <i className="fab fa-whatsapp me-2"></i>+91 98765 43210
+                <i className="fab fa-whatsapp me-2"></i>+{phoneNumber}
               </p>
               <p className="small mb-2">
-                <i className="fas fa-envelope me-2"></i>support@yourdomain.com
+                <i className="fas fa-envelope me-2"></i>
+                {emailAdress}
               </p>
 
               <div className="d-flex gap-3 mt-2">

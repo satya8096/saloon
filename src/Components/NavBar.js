@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
-import { NavLink, useLocation } from "react-router-dom";
-import { BrandName } from "./../Data/BrandData";
+import { Link, NavLink, useLocation } from "react-router-dom";
+import { BrandName, phoneNumber } from "./../Data/BrandData";
 const Navbar = () => {
   const { pathname } = useLocation();
   const handleNavCollapse = () => {
@@ -15,7 +15,6 @@ const Navbar = () => {
     }
   };
   useEffect(() => {
-    // Scroll to top smoothly on route change
     window.scrollTo({
       top: 0,
       behavior: "smooth",
@@ -65,6 +64,20 @@ const Navbar = () => {
               </li>
             ))}
           </ul>
+          <div className="text-center">
+            <Link
+              to={`tel:${phoneNumber}`}
+              className="btn btn-outline-dark m-2"
+            >
+              <i className="fa-solid fa-calendar-check"></i> Book Appointment
+            </Link>
+            <Link
+              to={"https://maps.app.goo.gl/e6CqK1PzxrEuhNrV6"}
+              className="btn btn-outline-info m-2"
+            >
+              <i className="fa-solid fa-location-dot"></i> Saloon Finder
+            </Link>
+          </div>
         </div>
       </div>
     </nav>
