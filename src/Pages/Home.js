@@ -20,13 +20,12 @@ const Home = () => {
           <div className="row align-items-center flex-lg-row flex-column-reverse">
             {/* Text Section */}
             <div className="col-lg-6 text-section text-lg-start text-center">
-              <h1 className="hero-title ">
-                Beauty Parlour & Salon Services{" "}
-                <br className="d-md-inline" />
+              <h2 className="hero-title ">
+                Beauty Parlour & Salon Services <br className="d-md-inline" />
                 <span className="text-success home-tagline">
                   Glow Up Without Stepping Out
                 </span>
-              </h1>
+              </h2>
               <p className="hero-subtext mt-3">
                 Enjoy premium salon services from the comfort of your home —
                 hygienic, professional, and at your schedule.
@@ -38,15 +37,51 @@ const Home = () => {
                 <i className="fas fa-calendar-check me-2"></i>Book Your
                 Appointment
               </Link>
+              <div className="mt-4">
+                <div className="d-flex flex-column flex-sm-row align-items-center justify-content-start rounded-3 py-3">
+                  <div className="me-sm-4 mb-2 mb-sm-0 text-center text-sm-start">
+                    <div className="d-flex align-items-center mb-1">
+                      <i className="fa-solid fa-star text-warning me-1 fs-5"></i>
+                      <i className="fa-solid fa-star text-warning me-1 fs-5"></i>
+                      <i className="fa-solid fa-star text-warning me-1 fs-5"></i>
+                      <i className="fa-solid fa-star text-warning me-1 fs-5"></i>
+                      <i className="fa-solid fa-star text-warning me-1 fs-5"></i>
+                      <span
+                        className="fw-bold mt-2"
+                        style={{ fontSize: "1.2rem" }}
+                      >
+                        4.3
+                      </span>
+                    </div>
+                    <div className="text-muted small">
+                      Based on 15+ Google Reviews
+                    </div>
+                  </div>
+
+                  <div className="text-center text-sm-start border-start ps-sm-4">
+                    <div className="d-flex align-items-center justify-content-center">
+                      <img
+                        src={require("./../Assets/google_logo.png")}
+                        alt="logo"
+                        className="me-2"
+                        style={{ width: "2rem" }}
+                      />
+                      <span className="fw-semibold text-dark small">
+                        Verified by Google
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
 
             {/* Image Section */}
             <div className="col-lg-6 mb-4 mb-lg-0">
               <div className="hero-img-wrap text-center">
                 <img
-                  src={require("./../Assets/footer_bacground.jpg")}
+                  src={require("./../Assets/img11.jpeg")}
                   alt={`${BrandName} Salon at Home`}
-                  className="rounded home-main-here-img"
+                  className="rounded-4 home-main-hero-img"
                 />
               </div>
             </div>
@@ -141,7 +176,7 @@ const Home = () => {
       <section className="py-5">
         <div className="container text-center">
           <h3 className="fw-bold section-heading mb-4">Explore Our Services</h3>
-          <div className="row g-4 justify-content-center">
+          <div className="row g-4 justify-content-center mt-4">
             {servicesTemplate.map((service, index) => (
               <div className="col-6 col-sm-4 col-md-3 col-lg-2" key={index}>
                 <div className="service-tab-card">
@@ -168,7 +203,7 @@ const Home = () => {
             </p>
           </div>
 
-          <div className="row g-4">
+          <div className="row g-4 justify-content-center">
             {whyChooseUs.map((item, index) => (
               <div key={index} className="col-md-4">
                 <div className="d-flex align-items-start gap-3">

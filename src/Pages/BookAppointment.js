@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { BrandName } from "../Data/BrandData";
 import { Link } from "react-router-dom";
 import { BookPageSEO } from "./../Data/AllPagesSEO";
+import { serviceOptions } from "../Data/BookNowPageData";
 
 const BookAppointment = () => {
   const [formData, setFormData] = useState({
@@ -33,7 +34,14 @@ const BookAppointment = () => {
     setErrors(formErrors);
 
     if (Object.keys(formErrors).length === 0) {
-      const message = `Hello, I'm *${formData.name}* (%2B91-${formData.phone}) and I’d like to book *${formData.service}* on *${formData.date}* at *${formData.time}*. Please confirm. - ${BrandName}`;
+      const message = `Hi, I’m *${formData.name}* (+91-${
+        formData.phone
+      }). I’m interested in booking *${formData.service}* on *${formData.date
+        .split("-")
+        .reverse()
+        .join("-")}* at *${
+        formData.time
+      }*. Kindly confirm my appointment. - ${BrandName}`;
       window.open(
         `https://wa.me/918331889448?text=${encodeURIComponent(message)}`,
         "_blank"
@@ -45,14 +53,14 @@ const BookAppointment = () => {
     <>
       {BookPageSEO}
       {/* Hero Section */}
-      <section className="booking-hero-section py-5">
+      <section className="booking-hero-section">
         <div className="container">
           <div className="row align-items-center gy-4">
             {/* Left Side - Content */}
             <div className="col-md-6">
-              <h1 className="fw-bold text-dark">
+              <h2 className="fw-bold text-dark hero-title">
                 Book Salon Services at Home in Hyderabad
-              </h1>
+              </h2>
               <span className="text-danger home-tagline">
                 Don’t Wait, Just Book Today!
               </span>
@@ -68,11 +76,13 @@ const BookAppointment = () => {
 
             {/* Right Side - Image */}
             <div className="col-md-6 text-center">
-              <img
-                src="https://img.freepik.com/free-photo/woman-receiving-facial-treatment-salon_1303-27356.jpg?t=st=1751942912~exp=1751946512~hmac=1692f9578c86b5b4a6551a0c9cbd1c8e8adff68be25c85f3791fbc7e8b0b2cd1&w=1380"
-                alt="Book Now"
-                className="img-fluid rounded-4 shadow booking-hero-img"
-              />
+              <div className="text-center">
+                <img
+                  src={require("./../Assets/img6.jpeg")}
+                  alt="Book Now"
+                  className="img-fluid rounded-4 shadow booking-hero-img"
+                />
+              </div>
             </div>
           </div>
         </div>
@@ -96,7 +106,9 @@ const BookAppointment = () => {
               className="bg-white p-4 rounded shadow"
             >
               <div className="mb-3">
-                <label className="form-label fw-semibold">Name</label>
+                <label className="form-label fw-semibold">
+                  Name<span className="text-danger ms-2">*</span>
+                </label>
                 <input
                   type="text"
                   className={`form-control ${errors.name ? "is-invalid" : ""}`}
@@ -112,7 +124,9 @@ const BookAppointment = () => {
               </div>
 
               <div className="mb-3">
-                <label className="form-label fw-semibold">Phone Number</label>
+                <label className="form-label fw-semibold">
+                  Phone Number <span className="text-danger ms-2">*</span>
+                </label>
                 <input
                   type="tel"
                   className={`form-control ${errors.phone ? "is-invalid" : ""}`}
@@ -128,7 +142,9 @@ const BookAppointment = () => {
               </div>
 
               <div className="mb-3">
-                <label className="form-label fw-semibold">Service</label>
+                <label className="form-label fw-semibold">
+                  Service <span className="text-danger ms-2">*</span>
+                </label>
                 <select
                   className={`form-select ${
                     errors.service ? "is-invalid" : ""
@@ -146,6 +162,9 @@ const BookAppointment = () => {
                   <option value="Pedicure & Manicure">
                     Pedicure & Manicure
                   </option>
+                  {serviceOptions.map((service, index) => {
+                    return <option key={index}>{service.label}</option>;
+                  })}
                 </select>
                 {errors.service && (
                   <div className="invalid-feedback">{errors.service}</div>
@@ -153,7 +172,9 @@ const BookAppointment = () => {
               </div>
 
               <div className="mb-3">
-                <label className="form-label fw-semibold">Date</label>
+                <label className="form-label fw-semibold">
+                  Date <span className="text-danger ms-2">*</span>
+                </label>
                 <input
                   type="date"
                   className={`form-control ${errors.date ? "is-invalid" : ""}`}
@@ -168,7 +189,10 @@ const BookAppointment = () => {
               </div>
 
               <div className="mb-4">
-                <label className="form-label fw-semibold">Time</label>
+                <label className="form-label fw-semibold">
+                  Time ( 24 hrs format ){" "}
+                  <span className="text-danger ms-2">*</span>
+                </label>
                 <input
                   type="time"
                   className={`form-control ${errors.time ? "is-invalid" : ""}`}

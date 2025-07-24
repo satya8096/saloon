@@ -70,12 +70,12 @@ const Services = () => {
   return (
     <section className="bg-light">
       {ServicePageSEO}
-      <section className="services-hero-section py-5">
+      <section className="services-hero-section -5">
         <div className="container">
           <div className="row align-items-center gy-4">
             {/* Text Section */}
             <div className="col-md-6">
-              <h1 className="fw-bold text-dark services-hero-title">
+              <h1 className="fw-bold text-dark hero-title">
                 Salon Services at Your Doorstep in Hyderabad
               </h1>
               <span className="text-warning home-tagline">
@@ -95,12 +95,14 @@ const Services = () => {
             </div>
 
             {/* Image Section */}
-            <div className="col-md-6 text-center">
-              <img
-                src="https://img.freepik.com/free-photo/hairdresser-making-hairdo-young-woman-salon_1303-20925.jpg"
-                alt="Salon Services"
-                className="img-fluid rounded-4 shadow services-hero-img"
-              />
+            <div className="col-md-6 mb-lg-0 mb-4">
+              <div className="text-center">
+                <img
+                  src={require("./../Assets/img4.jpeg")}
+                  alt="Salon Services"
+                  className="service-hero-img rounded-4"
+                />
+              </div>
             </div>
           </div>
         </div>
@@ -192,7 +194,8 @@ const Services = () => {
               style={{ whiteSpace: "nowrap" }}
               className="btn btn-warning px-4 py-2 fw-semibold mt-4"
             >
-              <i className="fa-solid fa-calendar-check"></i> Book an Appointment Now
+              <i className="fa-solid fa-calendar-check"></i> Book an Appointment
+              Now
             </Link>
           </div>
         </div>

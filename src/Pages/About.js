@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 import { AboutPageSEO } from "./../Data/AllPagesSEO";
 import { stats } from "../Data/AboutPageData";
 import Testimonials from "../Components/Testimonials";
+import Gallery from "../Components/Gallery";
 
 const AchievementCard = ({ label, value, color }) => {
   const [count, setCount] = useState(0);
@@ -59,10 +60,11 @@ const About = () => {
 
           {/* Intro Section */}
           <div className="row align-items-center mb-5">
-            <div className="col-md-6 mb-4 mb-md-0">
+            <div className="col-md-6 mb-4 mb-md-0 text-center">
               <img
-                src="https://img.freepik.com/free-photo/young-woman-lying-cosmetologist-s-table-rejuvenation-procedure_343596-63.jpg"
+                src={require("./../Assets/img10.jpeg")}
                 alt="About Us"
+                style={{ width: "20rem" }}
                 className="img-fluid rounded-4 shadow"
               />
             </div>
@@ -84,10 +86,11 @@ const About = () => {
 
           {/* Our Mission & Vision */}
           <div className="row align-items-center flex-md-row-reverse mb-5">
-            <div className="col-md-6 mb-4 mb-md-0">
+            <div className="col-md-6 mb-4 mb-md-0 text-center">
               <img
-                src="https://img.freepik.com/free-photo/woman-applying-lipstick-looking-mirror_23-2148165569.jpg"
+                src={require("./../Assets/img5.jpeg")}
                 alt="Mission & Vision"
+                style={{ width: "20rem" }}
                 className="img-fluid rounded-4 shadow"
               />
             </div>
@@ -111,10 +114,11 @@ const About = () => {
 
           {/* How We Work */}
           <div className="row align-items-center">
-            <div className="col-md-6 mb-4 mb-md-0">
+            <div className="col-md-6 mb-4 mb-md-0 text-center">
               <img
-                src="https://img.freepik.com/free-photo/female-hairdresser-making-hairstyle-client_1303-20930.jpg"
+                src={require("./../Assets/img4.jpeg")}
                 alt="How We Work"
+                style={{ width: "20rem" }}
                 className="img-fluid rounded-4 shadow"
               />
             </div>
@@ -156,6 +160,7 @@ const About = () => {
       </section>
 
       <Testimonials />
+      <Gallery />
       <section className="about-cta-section py-5">
         <div className="container">
           <div className="cta-box bg-white shadow rounded-4 p-5 text-center">
@@ -169,7 +174,8 @@ const About = () => {
             </p>
             <Link
               to="/book-an-appointment"
-              className="btn btn-warning px-4 py-2 fw-semibold" style={{whiteSpace:"nowrap"}}
+              className="btn btn-warning px-4 py-2 fw-semibold"
+              style={{ whiteSpace: "nowrap" }}
             >
               <i className="fas fa-calendar-check me-2"></i>Book Your
               Appointment

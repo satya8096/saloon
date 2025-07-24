@@ -103,7 +103,8 @@ const Footer = () => {
           <hr className="text-secondary" />
 
           <div className="text-center small">
-            &copy; {new Date().getFullYear()} {BrandName}. All rights reserved |
+            <span style={{ fontSize: "1.4rem" }}>&copy;</span>{" "}
+            {new Date().getFullYear()} {BrandName}. All rights reserved |
             Developed with ❤️ by{" "}
             <a
               href="https://nexgenwebdesigns.com"

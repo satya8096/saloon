@@ -7,12 +7,14 @@ const Contact = () => {
   return (
     <section className="contact-section">
       {ContactPageSEO}
-      <section className="contact-hero-section py-5">
+      <section className="contact-hero-section">
         <div className="container">
           <div className="row align-items-center gy-4 flex-lg-row flex-column-reverse">
             {/* Left Section */}
             <div className="col-lg-6 text-section text-lg-start text-center">
-              <h1 className="fw-bold text-dark">Get in Touch with Us</h1>
+              <h2 className="fw-bold text-dark hero-title">
+                Get in Touch with Us
+              </h2>
               <span className="text-success home-tagline">
                 Beauty Helpdesk – Call or Click!
               </span>
@@ -31,11 +33,13 @@ const Contact = () => {
 
             {/* Right Section */}
             <div className="col-md-6 text-center">
-              <img
-                src="https://img.freepik.com/premium-vector/customer-service-is-interactions-with-customer-with-friendly-service-office_249611-34490.jpg?w=1480"
-                alt="Contact Us"
-                className="img-fluid rounded-4 shadow contact-hero-img"
-              />
+              <div className="text-center">
+                <img
+                  src={require("./../Assets/img7.jpeg")}
+                  alt="Contact Us"
+                  className="img-fluid rounded-4 shadow contact-hero-img"
+                />
+              </div>
             </div>
           </div>
         </div>
@@ -158,7 +162,7 @@ const Contact = () => {
             </div>
             <div className="col-md-5 text-center">
               <img
-                src="https://img.freepik.com/free-vector/hand-drawn-hairdresser-cartoon-illustration_23-2151046697.jpg?t=st=1752003328~exp=1752006928~hmac=4de3cf4338fd20a38501cda07818bfab5733c1be353d427dd22ab42971e1e3d9&w=1480"
+                src={require("./../Assets/img12.avif")}
                 alt="Contact Illustration"
                 className="img-fluid rounded-4 shadow-sm contact-image"
               />

@@ -25,12 +25,12 @@ const Pricing = () => {
   return (
     <section className="">
       {PricingPageSEO}
-      <section className="pricing-hero-section py-5">
+      <section className="pricing-hero-section ">
         <div className="container">
           <div className="row align-items-center gy-4">
             {/* Left: Text */}
             <div className="col-md-6">
-              <h1 className="fw-bold text-dark pricing-hero-title">
+              <h1 className="fw-bold text-dark hero-title">
                 Affordable Beauty Services at Home
               </h1>
               <span className="text-primary home-tagline">
@@ -51,11 +51,13 @@ const Pricing = () => {
 
             {/* Right: Image */}
             <div className="col-md-6 text-center">
-              <img
-                src="https://img.freepik.com/free-photo/close-up-face-young-woman-relaxing-gentle_158595-4584.jpg?t=st=1751947903~exp=1751951503~hmac=8cd03d2747dedb4038f5803fd9c4ed45790a9232d3ddfcc395a4ebbd465d53cb&w=1480"
-                alt="Pricing"
-                className="img-fluid rounded-4 shadow pricing-hero-img"
-              />
+              <div className="text-center">
+                <img
+                  src={require("./../Assets/img1.jpeg")}
+                  alt="Pricing"
+                  className="rounded-4 shadow pricing-hero-img"
+                />
+              </div>
             </div>
           </div>
         </div>
