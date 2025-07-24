@@ -4,6 +4,6 @@ export const brandUrl = "https://nexgenwebdesigns.com";
 
 export const brandLogo = "https://nexgenwebdesigns.com";
 
-export const phoneNumber = +918331889448;
+export const phoneNumber = +917569533756;
 
 export const emailAdress = "info@saloon.com";

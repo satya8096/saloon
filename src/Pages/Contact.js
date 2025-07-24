@@ -162,7 +162,7 @@ const Contact = () => {
             </div>
             <div className="col-md-5 text-center">
               <img
-                src={require("./../Assets/img12.avif")}
+                src={require("./../Assets/img12.jpg")}
                 alt="Contact Illustration"
                 className="img-fluid rounded-4 shadow-sm contact-image"
               />

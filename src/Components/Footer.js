@@ -105,7 +105,7 @@ const Footer = () => {
           <div className="text-center small">
             <span style={{ fontSize: "1.4rem" }}>&copy;</span>{" "}
             {new Date().getFullYear()} {BrandName}. All rights reserved |
-            Developed with ❤️ by{" "}
+            Designed and Developed with ❤️ by{" "}
             <a
               href="https://nexgenwebdesigns.com"
               className="text-warning text-decoration-none"

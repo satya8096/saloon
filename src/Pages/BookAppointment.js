@@ -92,7 +92,7 @@ const BookAppointment = () => {
         <div className="col-md-6">
           <img
             className="w-100"
-            src="https://img.freepik.com/free-vector/appointment-booking-with-smartphone_23-2148554946.jpg?t=st=1752000660~exp=1752004260~hmac=0946e7bff2fc0be497aab5aaa6728613958e8e54e917bbf7805cbb0d377813ee&w=1480"
+            src={require("./../Assets/img26.jpg")}
             alt="appointment booking"
           />
         </div>
